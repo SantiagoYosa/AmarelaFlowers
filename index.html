@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peldon no tengo dinero</title>
+    <style>
+        /* Fondo difuminado oscuro de colores punk */
+        body {
+            font-family: 'Courier New', monospace;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(150deg, #2c003e 20%, #000000 70%, #1b0033 100%);
+            background-size: 400% 400%;
+            animation: gradientAnimation 10s ease infinite;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Contenedor centrado */
+        .container {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 30px rgba(255, 0, 255, 0.8);
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #ff00ff;
+            text-transform: uppercase;
+        }
+
+        p {
+            color: #00ff00;
+            font-size: 1.2rem;
+        }
+
+        button {
+            background-color: #00ff00;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ff00ff;
+            color: white;
+        }
+
+        /* Animación de gradiente de fondo */
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Estrellas titilantes */
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #ffffff;
+            border-radius: 50%;
+            animation: twinkling 2s infinite ease-in-out;
+        }
+
+        /* Animación para las estrellas */
+        @keyframes twinkling {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ola mi vida:3!</h1>
+        <p>No tengo dinero pero se programar juas juas juas.</p>
+        <p>Perdoname tan poco pero te prometo que si te quedas conmigo no te va a faltar nada en el futuro 💜. </p>
+        <button onclick="window.location.href='main.html'">Dale aqui</button>
+    </div>
+
+    <!-- Generar estrellas aleatorias -->
+    <script>
+        const numberOfStars = 100;
+        for (let i = 0; i < numberOfStars; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            star.style.top = Math.random() * 100 + 'vh';
+            star.style.left = Math.random() * 100 + 'vw';
+            star.style.animationDuration = Math.random() * 2 + 2 + 's';
+            document.body.appendChild(star);
+        }
+    </script>
+</body>
+</html>
